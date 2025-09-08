@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f2f5;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #fff;
+  width: 80%;
+  min-width: 550px;
+  padding: 70px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 8px;
+  /* height: 40vh; */
+}
+h1 {
+  background: white;
+  font-size: 30px;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+.currency-exchange {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  /* border: 2px solid black; */
+  padding: 12px;
+}
+.input_container {
+  width: 30%;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+}
+.input_label {
+  font-size: 0.95rem;
+  color: #8b8e98;
+  font-weight: 600;
+  background: #fff;
+}
+.input-field {
+  width: auto;
+  height: 60px;
+  background: white;
+  border-radius: 7px;
+  padding: 0 0 0 40px;
+  outline: none;
+  filter: drop-shadow(0px 1px 0px #efefef)
+    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+/* .input-field:focus {
+  border: 1px solid transparent;
+  background: white;
+  box-shadow: 0px 0px 0px #242424;
+} */
+.output {
+  background: white;
+}
+h2 {
+  width: 50%;
+  margin-top: 20px;
+  background-color: #e8f8fd;
+  padding: 26px;
+  border-radius: 10px;
+}
+
+/* ===== Medium Screens (Tablets, ~900px and below) ===== */
+@media screen and (max-width: 900px) {
+  .card {
+    width: 90%;
+    padding: 40px;
+  }
+  .currency-exchange {
+    gap: 20px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+}
+
+/* ===== Small Screens (Large Phones, ~768px and below) ===== */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 95%;
+    min-width: unset; /* remove min-width so it shrinks properly */
+    padding: 30px;
+  }
+  .currency-exchange {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input_container {
+    width: 100%;
+  }
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  h2 {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+/* ===== Extra Small Screens (Phones, ~480px and below) ===== */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0; /* full-width card look */
+  }
+  .input-field {
+    height: 50px;
+    padding-left: 12px;
+    font-size: 14px;
+  }
+}
